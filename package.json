@@ -11,6 +11,8 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-plugin-jest": "^22.6.4",
     "jest": "^24.8.0"
   },
   "scripts": {
