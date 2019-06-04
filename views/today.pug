@@ -9,10 +9,10 @@ block content
         th Out
     tbody
       for employee in employees
-        - let url = `/employees/${employee.id}`
+        - let url = `/stats/${employee.id}`
         tr.employee
           td.employee-name
-            a(href=url)= employee.name
+            a(href=url)= employee.firstName
           td.in= employee.in
           td.out= employee.out
       else
