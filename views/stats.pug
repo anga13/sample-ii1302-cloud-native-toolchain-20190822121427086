@@ -1,0 +1,17 @@
+extends index.pug
+
+block content
+  h1 #{employee.firstName} #{employee.lastName}
+  table
+    tr
+      td ID
+      td= employee.id
+    tr
+      td First Name
+      td= employee.firstName
+    tr
+      td Last Name
+      td= employee.lastName
+  for stat in stats
+    ul
+      li #{stat.day}: #{stat.in}-#{stat.out}

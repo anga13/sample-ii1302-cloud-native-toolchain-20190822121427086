@@ -1,0 +1,19 @@
+extends index.pug
+
+block content
+  table
+    thead
+      tr
+        th Name
+        th In
+        th Out
+    tbody
+      for employee in employees
+        - let url = `/employees/${employee.id}`
+        tr.employee
+          td.employee-name
+            a(href=url)= employee.name
+          td.in= employee.in
+          td.out= employee.out
+      else
+        p No one has checked in today
