@@ -11,7 +11,7 @@ function initDB() {
         vcapLocal = require('./vcap-local.json')
         //console.log('Loaded local VCAP', vcapLocal)
     } catch (e) {
-        return {}
+        vcapLocal = null
     }
 
     const appEnvOpts = vcapLocal ? { vcap: vcapLocal} : {}
