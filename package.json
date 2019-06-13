@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Trying to learn some DevOps and Cloudant",
   "engines": {
-    "node": "11.14.0",
+    "node": "10.16.0",
     "npm": "6.9.0"
   },
   "main": "index.js",
