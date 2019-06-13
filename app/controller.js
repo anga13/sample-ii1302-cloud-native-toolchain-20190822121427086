@@ -2,7 +2,7 @@ const db = require('./db')
 
 module.exports = {
     async getStats(id) {
-        const employee = employees[0]
+        const employee = (employees.length>id)? employees[id]: employees[0]
         employee.stats = stats
         return employee
     },
