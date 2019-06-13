@@ -1,14 +1,16 @@
+const db = require('./db')
+
 module.exports = {
     async getStats(id) {
-        const employee = employees[id]
+        const employee = employees[0]
         employee.stats = stats
         return employee
     },
     async today() {
-        return employees
+        return db.allEmployees()
     },
     async hours() {
-        return employees
+        return db.allEmployees()
     }
 }
 
