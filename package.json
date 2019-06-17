@@ -11,6 +11,7 @@
     "@cloudant/cloudant": "^4.1.0",
     "cfenv": "^1.2.2",
     "express": "^4.17.1",
+    "pino": "^5.12.6",
     "pug": "^2.0.3"
   },
   "devDependencies": {

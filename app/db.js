@@ -1,6 +1,7 @@
 // Load the Cloudant library.
 const Cloudant = require('@cloudant/cloudant')
 const cfenv = require('cfenv')
+const logger = require('pino')()
 
 const cloudant = initDB()
 
@@ -19,7 +20,10 @@ function initDB() {
     const appEnv = cfenv.getAppEnv(appEnvOpts)
 
     // Initialize database with credentials for CF service named 'cloudantNoSQLDB'
-    return Cloudant(appEnv['cloudantNoSQLDB'].credentials)
+    logger.info('AppEnv', appEnv)
+    const credentials = appEnv.services.cloudantNoSQLDB[0].credentials
+    logger.info('credentials', credentials)
+    return Cloudant(credentials.url)
 }
 
 module.exports = {
