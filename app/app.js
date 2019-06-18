@@ -1,9 +1,11 @@
 const express = require('express')
+const pino = require('express-pino-logger')()
 const app = express()
 
 const controller = require('./controller')
 
 app.set('view engine', 'pug')
+app.use(pino)
 
 app.get('/', (req, res) => {
     res.render('index')
