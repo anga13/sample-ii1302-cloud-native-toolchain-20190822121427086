@@ -34,5 +34,10 @@ module.exports = {
             return {id: row.doc._id, firstName: row.doc.firstName, lastName: row.doc.lastName}
         })
         return guys
+    },
+    async findEmployee(id) {
+        const db = cloudant.use('guys')
+        const result = await db.get(id)
+        return result
     }
 }
