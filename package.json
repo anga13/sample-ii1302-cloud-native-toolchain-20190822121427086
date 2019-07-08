@@ -18,7 +18,8 @@
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-plugin-jest": "^22.6.4",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "selenium-webdriver": "^4.0.0-alpha.4"
   },
   "scripts": {
     "start": "node index.js",
