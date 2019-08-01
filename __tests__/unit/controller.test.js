@@ -1,5 +1,5 @@
-const controller = require('./controller')
-jest.mock('./db')
+const controller = require('../../app/controller')
+jest.mock('../../app/db')
 
 describe('getStats() method', () => {
     let employee

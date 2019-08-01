@@ -24,7 +24,9 @@
   "scripts": {
     "start": "node index.js",
     "lint": "./node_modules/eslint/bin/eslint.js ./app",
-    "test": "./node_modules/jest/bin/jest.js"
+    "unit-test": "./node_modules/jest/bin/jest.js unit",
+    "gui-test": "./node_modules/jest/bin/jest.js gui",
+    "test": "npm run unit-test"
   },
   "repository": {
     "type": "git",
