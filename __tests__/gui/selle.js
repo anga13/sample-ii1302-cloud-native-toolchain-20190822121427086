@@ -1,11 +1,11 @@
 const webdriver = require('selenium-webdriver')
-const chrome = require('selenium-webdriver/chrome')
+const firefox = require('selenium-webdriver/firefox')
 const appUrl = process.env.APP_URL || 'google.com'
 
 describe('GUI', () => {
     let driver 
     beforeAll(() => {
-        driver = new webdriver.Builder().forBrowser('chrome').setChromeOptions(new chrome.Options().headless()).build()
+        driver = new webdriver.Builder().forBrowser('firefox').setFirefoxOptions(new firefox.Options().headless()).build()
     })
     test('Works', async () => {
         console.log(appUrl)
