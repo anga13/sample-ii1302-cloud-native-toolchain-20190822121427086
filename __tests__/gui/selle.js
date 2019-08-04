@@ -5,7 +5,7 @@ const appUrl = process.env.APP_URL || 'google.com'
 describe('GUI', () => {
     let driver 
     beforeAll(() => {
-        driver = new webdriver.Builder().forBrowser('chrome').setChromeOptions(new chrome.Options().headless()).build()
+        driver = new webdriver.Builder().forBrowser('firefox').setFirefoxOptions(new firefox.Options().headless()).build()
     })
     test('Works', async () => {
         console.log(appUrl)
