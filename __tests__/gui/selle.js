@@ -1,5 +1,5 @@
 const webdriver = require('selenium-webdriver')
-const chrome = require('selenium-webdriver/chrome')
+const firefox = require('selenium-webdriver/firefox')
 const appUrl = process.env.APP_URL || 'google.com'
 
 describe('GUI', () => {
