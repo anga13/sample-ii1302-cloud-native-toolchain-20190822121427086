@@ -24,10 +24,10 @@
   },
   "scripts": {
     "start": "node index.js",
-    "lint": "./node_modules/eslint/bin/eslint.js ./app",
-    "unit-test": "./node_modules/jest/bin/jest.js unit --ci --reporters=default --reporters=jest-junit",
+    "lint": "./node_modules/eslint/bin/eslint.js ./app --format junit -o lint.xml",
+    "unit-test": "./node_modules/jest/bin/jest.js unit",
     "gui-test": "./node_modules/jest/bin/jest.js gui",
-    "test": "npm run unit-test"
+    "test": "npm run unit-test -- --coverage"
   },
   "repository": {
     "type": "git",
